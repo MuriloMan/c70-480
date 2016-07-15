@@ -11,27 +11,12 @@
         <tr>
             <td>
                 <xmp>
-<script>
 <svg>
-	//cx,cy onde será posicionado o centro do circulo
-	//r distancia em raio do centro do circulo
-	<circle id="circle" 
-	cx="50" cy="50" r="50" 
-	fill="blue" 
-	onmouseover="red(evt)" 
-	onmouseout="green(evt)"/>
-</svg>		
-function red(evt){
-	var circle = evt.target;
-	circle.setAttribute("style", "fill: red");
-}
-
-function green (evt){
-	var circle = evt.target; 
-	circle.setAttribute("style", "fill:green");
-
-}
-</script>
+	<rect x="0" y="0" width="60" height="200" fill="black"/>
+	<circle cx="30" cy="25" r="20" fill="red"/>
+	<circle cx="30" cy="75" r="20" fill="yellow"/>
+	<circle cx="30" cy="125" r="20" fill="green"/>
+</svg>	
 				</xmp>
             </td>
             <td>
