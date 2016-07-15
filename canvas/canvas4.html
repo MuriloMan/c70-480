@@ -1,0 +1,76 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img src="quadraticCurveTo.png" width="400px" />
+                <xmp>
+                    <canvas id="drawningSurface" width="600" height="400">
+                        browser nao suporta html5
+                    </canvas>
+                    <script>
+                        window.onload = function () {
+                            var drawningSurface = document.getElementById("drawningSurface");
+                            var context = drawningSurface.getContext("2d");
+                            context.beginPath();
+                            context.moveTo(10, 380);
+                            context.quadraticCurveTo(300, -250, 580, 380);
+                            context.lineWidth = 25;
+                            context.strokeStyle = '#f00';
+                            context.stroke();
+                        }
+                    </script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="drawningSurface" width="600" height="600">
+                    browser nao suporta html5
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawningSurface = document.getElementById("drawningSurface");
+            var context = drawningSurface.getContext("2d");
+
+
+            var startX = 20;
+            var startY = 20;
+
+            var endX = 200;
+            var endY = 300;
+
+            var controlX = 20;
+            var controlY = 20;
+
+            context.beginPath();
+            context.moveTo(100, 100);
+            context.quadraticCurveTo(controlX, controlY, endX, endY);
+            context.lineWidth = 1;
+            context.strokeStyle = '#f00';
+            context.stroke();
+
+        }
+    </script>
+
+</body>
+</html>

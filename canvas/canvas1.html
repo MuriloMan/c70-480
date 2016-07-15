@@ -1,0 +1,50 @@
+<a href="../index.html">index</a> 
+
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					<xmp>
+<canvas id="drawningSurface" width="600" height="400">
+	browser nao suporta html5
+</canvas>
+<script>
+	window.onload = function(){
+		var drawningSurface = document.getElementById("drawningSurface");
+		var context = drawningSurface.getContext("2d");
+		context.beginPath();
+		context.moveTo(10,10);
+		context.lineTo(225, 350);
+		context.stroke();
+	}
+</script>
+					</xmp>
+				</td>
+				<td>			
+					<canvas id="drawningSurface" width="600" height="400">
+						browser nao suporta html5
+					</canvas>
+				</td>
+			</tr>
+		</table>
+		<style>
+		td{border: 1px solid black}
+		canvas{border:1px solid black;}
+		</style>
+		<script>
+		window.onload = function(){
+			var drawningSurface = document.getElementById("drawningSurface");
+			var context = drawningSurface.getContext("2d");
+			context.beginPath();
+			context.moveTo(10,10);
+			context.lineTo(225, 350);
+			context.stroke();
+		}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<a href="../index.html">index</a>
+<xmp>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<table>
+				<tr>
+					<td colspan='3'>
+						<header>
+							<h1>A Thoughtful Experiment</h1>
+						</header>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<nav = id="navId">
+							<a href="">Home</a>
+							<a href="">Page 1</a>
+							<a href="">Page 2</a>
+							<a href="">Page 3</a>
+						</nav>
+					</td>
+				</tr>
+			</table>
+			<a href="#" onclick="teste()">click me</a>
+		</body>
+	</html>
+	<script>
+		function teste(){
+			var nav = document.getElementById("navId");
+			var a = document.createElement("a");
+			a.innerText = " - TESTE link";
+			nav.appendChild(a);
+		}
+	</script>
+</xmp>

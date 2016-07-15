@@ -1,0 +1,102 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>Canvas API</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+                    
+<button onclick="desenhar()">desenhar</button>
+<canvas id="x" width="400" height="300">
+browser nao suporta html5
+</canvas>
+<script>
+function desenhar() {
+//pegar context
+Context = document.getElementById("x").getContext("2d");
+
+//criar um novo desenho
+Context.beginPath();
+
+//movemos a caneta para o inicio do desenho
+Context.moveTo(0, 300);
+
+//desenhamos as linhas
+//x1,x2 = ponto que faz a linha se curvar
+//x3,x4 = ponto do fim da linha
+Context.quadraticCurveTo(50 /*x1*/, 0 /*x2*/, 100 /*x3*/, 300/*x4*/);
+
+//Context.quadraticCurveTo(300, -250, 400,400);
+Context.lineWidth = 2;
+
+//pintar o interior de amarelo
+Context.fillStyle = "#ff0";
+//o desenho não é verdade até mandar o context pintar
+Context.fill();
+
+//pintar linhas vermelhas
+Context.strokeStyle = "#f00";
+Context.stroke();
+}
+</script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="x" width="400" height="300">
+                    browser nao suporta html5
+                </canvas>
+                <button onclick="desenhar()">desenhar</button>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        function desenhar() {
+            //pegar context
+            Context = document.getElementById("x").getContext("2d");
+
+            //criar um novo desenho
+            Context.beginPath();
+
+            //movemos a caneta para o inicio do desenho
+            Context.moveTo(0, 300);
+
+            //desenhamos as linhas
+            //x1,x2 = ponto que faz a linha se curvar
+            //x3,x4 = ponto do fim da linha
+            //Context.quadraticCurveTo(x1,x2,x3,x4);
+            Context.quadraticCurveTo(50, 0, 100 , 300);
+
+            //Context.quadraticCurveTo(300, -250, 400,400);
+            Context.lineWidth = 2;
+
+            //pintar o interior de amarelo
+            Context.fillStyle = "#ff0";
+            //o desenho não é verdade até mandar o context pintar
+            Context.fill();
+
+            //pintar linhas vermelhas
+            Context.strokeStyle = "#f00";
+            Context.stroke();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>Canvas API</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+<canvas id="x" width="400" height="300">
+browser nao suporta html5
+</canvas>
+<button onclick="desenhar()">desenhar</button>
+<script>
+function desenhar() {
+var context = document.getElementById("x").getContext("2d");
+
+context.beginPath();
+context.moveTo(180, 150);
+context.quadraticCurveTo(140, 180, 200, 180);
+context.fillStyle = "#ff0";
+context.fill();
+context.stroke();
+
+context.beginPath();
+context.moveTo(220, 150);
+context.quadraticCurveTo(260, 180, 200, 180);
+context.fillStyle = "#ff0";
+context.fill();
+context.stroke();
+
+context.beginPath();
+context.moveTo(220, 150);
+context.lineTo(300, 120);
+context.stroke();
+
+context.beginPath();
+context.moveTo(180, 150);
+context.lineTo(100, 120);
+context.stroke();
+
+context.beginPath();
+context.moveTo(100, 120);
+context.quadraticCurveTo(200, 20, 300, 120);
+context.fillStyle = "#FF0";
+context.fill();
+context.stroke();
+}
+</script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="x" width="400" height="300">
+                    browser nao suporta html5
+                </canvas>
+                <button onclick="desenhar()">desenhar</button>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        function desenhar() {
+            var context = document.getElementById("x").getContext("2d");
+
+            context.beginPath();
+            context.moveTo(180, 150);
+            context.quadraticCurveTo(140, 180, 200, 180);
+            context.fillStyle = "#ff0";
+            context.fill();
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(220, 150);
+            context.quadraticCurveTo(260, 180, 200, 180);
+            context.fillStyle = "#ff0";
+            context.fill();
+            context.stroke();
+            
+            context.beginPath();
+            context.moveTo(220, 150);
+            context.lineTo(300, 120);
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(180, 150);
+            context.lineTo(100, 120);
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(100, 120);
+            context.quadraticCurveTo(200, 20, 300, 120);
+            context.fillStyle = "#FF0";
+            context.fill();
+            context.stroke();
+        }
+    </script>
+
+</body>
+</html>

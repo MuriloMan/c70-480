@@ -1,0 +1,57 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>Canvas API</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+<canvas id="x" width="400" height="400">
+browser nao suporta html5
+</canvas>
+<script>
+var context = document.getElementById("x").getContext("2d");
+context.beginPath();
+context.rect(10, 10, 100, 100);//300 - (150 / 2), 200(75 / 2), 15, 75);
+context.fillStyle = "#0000ff";
+context.fill();
+context.stroke();
+</script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="x" width="400" height="400">
+                    browser nao suporta html5
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        var context = document.getElementById("x").getContext("2d");
+
+        context.beginPath();
+        context.rect(10, 10, 100, 100);//300 - (150 / 2), 200(75 / 2), 15, 75);
+        context.fillStyle = "#0000ff";
+        context.fill();
+        context.stroke();
+    </script>
+
+</body>
+</html>

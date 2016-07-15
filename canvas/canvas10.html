@@ -1,0 +1,72 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>Canvas API</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+<canvas id="x" width="400" height="400">
+browser nao suporta html5
+</canvas>
+<script>
+var context = document.getElementById("x").getContext("2d");
+context.lineWidth = 3;
+//x,y,width,height
+context.rect(0,0,135,140);
+var img = new Image();
+img.src = "CdcmofFW0AQh9iN.jpg";
+img.onload = function (){
+var pat = context.createPattern(img, "repeat");
+context.fillStyle = pat;
+context.fill();
+context.stroke();
+}
+</script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="x" width="400" height="400">
+                    browser nao suporta html5
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        //setTimeout(function () { location.reload(); }, 300);
+
+		var context = document.getElementById("x").getContext("2d");
+		context.lineWidth = 3;
+		//x,y,width,height
+		context.rect(0,0,135,140);
+		
+		var img = new Image();
+		img.src = "CdcmofFW0AQh9iN.jpg";
+		img.onload = function (){
+			var pat = context.createPattern(img, "repeat");
+			context.fillStyle = pat;
+			context.fill();
+			context.stroke();
+		}
+		
+    </script>
+
+</body>
+</html>

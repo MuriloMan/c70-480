@@ -1,0 +1,91 @@
+<a href="../index.html">index</a> 
+
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					<xmp>
+<canvas id="drawningSurface" width="600" height="400">
+	browser nao suporta html5
+</canvas>
+<script>
+window.onload = function(){
+	var drawningSurface = document.getElementById("drawningSurface");
+	var context = drawningSurface.getContext("2d");
+	
+	context.beginPath(); 
+	context.arc(150,100,75,0,2 * Math.PI, false); 
+	context.lineWidth = 25; 
+	context.strokeStyle = '#0f0'; 
+	context.stroke();  
+	
+	context.beginPath(); 
+	context.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false); 
+	context.lineWidth = 25; 
+	context.strokeStyle = 'blue'; 
+	context.stroke();  
+	
+	context.beginPath(); 
+	context.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false); 
+	context.lineWidth = 25; 
+	context.strokeStyle = '#0ff'; 
+	context.stroke();  
+	
+	context.beginPath(); 
+	context.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false); 
+	context.lineWidth = 25; 
+	context.strokeStyle = '#f00'; 
+	context.stroke();
+}
+</script>
+					</xmp>
+				</td>
+				<td>			
+					<canvas id="drawningSurface" width="600" height="600">
+						browser nao suporta html5
+					</canvas>
+				</td>
+			</tr>
+		</table>
+		<style>
+		td{border: 1px solid black}
+		canvas{border:1px solid black;}
+		</style>
+		<script>
+		window.onload = function(){
+			var drawningSurface = document.getElementById("drawningSurface");
+			var context = drawningSurface.getContext("2d");
+			
+			context.beginPath(); 
+			context.arc(150,100,75,0,2 * Math.PI, false); 
+			context.lineWidth = 25; 
+			context.strokeStyle = '#0f0'; 
+			context.stroke();  
+			
+			context.beginPath(); 
+			context.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false); 
+			context.lineWidth = 25; 
+			context.strokeStyle = 'blue'; 
+			context.stroke();  
+			
+			context.beginPath(); 
+			context.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false); 
+			context.lineWidth = 25; 
+			context.strokeStyle = '#0ff'; 
+			context.stroke();  
+			
+			context.beginPath(); 
+			context.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false); 
+			context.lineWidth = 25; 
+			context.strokeStyle = '#f00'; 
+			context.stroke();
+			
+		}
+		</script>
+		
+	</body>
+</html>

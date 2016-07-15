@@ -1,0 +1,44 @@
+<a href="../index.html">index</a> 
+
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>SVG</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+				</xmp>
+            </td>
+            <td>
+                <canvas id="x" width="400" height="400">
+                    browser nao suporta html5
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        //setTimeout(function () { location.reload(); }, 300);
+		var context = document.getElementById("x").getContext("2d");
+		context.font= "30px arial";
+		context.fillStyle = "red";
+		context.fillText("1. text normal font", 20, 100);
+    </script>
+</body>
+</html>

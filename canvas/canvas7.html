@@ -1,0 +1,82 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=â€UTF-8â€ />
+    <title>Canvas API</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <xmp>
+<canvas id="x" width="200" height="200">
+browser nao suporta html5
+</canvas>
+<script>
+var context = document.getElementById("x").getContext("2d");
+context.linewidth = 3;
+
+//context.rect(x,y,width,height);
+context.rect(0, 0, 200, 200);
+
+//context.createLinearGradient(x1, y1, x2, y2);
+//x1, y1 = define onde gradiente começa escuro
+//x2, y2 = define onde gradiente termina preto
+var gradient = context.createLinearGradient(0, 0, 200, 200);
+
+
+gradient.addColorStop(0, "black");
+gradient.addColorStop(0.5, "Gray");
+gradient.addColorStop(1, "White");
+context.fillStyle = gradient;
+context.fill();
+context.stroke();
+
+</script>
+                </xmp>
+            </td>
+            <td>
+                <canvas id="x" width="200" height="200">
+                    browser nao suporta html5
+                </canvas>
+            </td>
+        </tr>
+    </table>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+    <script>
+        var context = document.getElementById("x").getContext("2d");
+        context.linewidth = 3;
+
+        //context.rect(x,y,width,height);
+        context.rect(0, 0, 200, 200);
+
+        //context.createLinearGradient(x1, y1, x2, y2);
+        //x1, y1 = define onde gradiente começa escuro
+        //x2, y2 = define onde gradiente termina preto
+        var gradient = context.createLinearGradient(0, 0, 200, 200);
+
+
+        gradient.addColorStop(0, "black");
+        gradient.addColorStop(0.5, "Gray");
+        gradient.addColorStop(1, "White");
+        context.fillStyle = gradient;
+        context.fill();
+        context.stroke();
+
+    </script>
+
+</body>
+</html>
