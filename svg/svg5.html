@@ -10,11 +10,11 @@
     <table>
         <tr>
             <td>
-<xmp>
-XD
+<xmp id="td1XMP">
+
 </xmp>
             </td>
-            <td>
+            <td id="content">
 				<svg>
 					<ellipse cx="250" cy="150" rx="30" ry="55 fill="green"/>
 				</svg>
@@ -22,12 +22,11 @@ XD
         </tr>
     </table>
     <style>
-        td {
-            border: 1px solid black;
-        }
         svg {
             border: 1px solid black;
         }
     </style>
+    <style>td {border: 1px solid black;}</style>
+    <script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
 </body>
 </html>

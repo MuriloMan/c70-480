@@ -10,16 +10,9 @@
     <table>
         <tr>
             <td>
-                <xmp>
-<svg>
-	<rect x="0" y="0" width="60" height="200" fill="black"/>
-	<circle cx="30" cy="25" r="20" fill="red"/>
-	<circle cx="30" cy="75" r="20" fill="yellow"/>
-	<circle cx="30" cy="125" r="20" fill="green"/>
-</svg>	
-				</xmp>
+                <xmp id="td1XMP"></xmp>
             </td>
-            <td>
+            <td id="content">
 				<svg>
 					<rect x="0" y="0" width="60" height="200" fill="black"/>
 					<circle cx="30" cy="25" r="20" fill="red"/>
@@ -30,12 +23,11 @@
         </tr>
     </table>
     <style>
-        td {
-            border: 1px solid black;
-        }
         svg {
             border: 1px solid black;
         }
     </style>
+    <style>td {border: 1px solid black;}</style>
+    <script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
 </body>
 </html>
