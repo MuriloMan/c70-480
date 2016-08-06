@@ -1,0 +1,91 @@
+<a href="../index.html">index</a>
+
+<html>
+<head>
+    <meta charset=”UTF-8” />
+    <title>CSS Show/Hide</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><xmp id="td1XMP"></xmp></td>
+            <td id="content">
+                <header>
+                    Dynamic Questions
+                </header>
+                <section>
+                    <article>
+                        <hgroup>
+                            <h1>
+                                Questions
+                            </h1>
+                        </hgroup>
+                        <div id="Question1">
+                            Question1<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion1" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion1" value="nao"> nao<br>
+                        </div>
+                        <div id="Question2">
+                            Question2<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion2" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion2" value="nao"> nao<br>
+                        </div>
+                        <div id="Question3">
+                            Question3<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion3" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion3" value="nao"> nao<br>
+                        </div>
+                        <div id="Question4">
+                            Question4<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion4" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion4" value="nao"> nao<br>
+                        </div>
+                        <div id="Question5">
+                            Question5<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion5" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion5" value="nao"> nao<br>
+                        </div>
+                        <div id="Question6">
+                            Question6<br/>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion6" value="sim"> sim<br>
+                            <input type="radio" onclick="nextQuestion(this)" name="radioQuestion6" value="nao"> nao<br>
+                        </div>
+                    </article>
+                </section>
+                <script>
+                    //sumir com todas div questions > 1
+                    for(var i=2; i<=6 ; i++){
+                        document.getElementById("Question"+i).style.display = "none";
+                    }
+
+                    function nextQuestion(element){
+
+                        if(element.name == "radioQuestion1" && element.value=="sim"){
+                            document.getElementById("Question2").style.display = "inline";
+                            return;
+                         }else if(element.name=="radioQuestion1" && element.value=="nao"){
+                            document.getElementById("Question3").style.display = "inline";
+                            return;
+                        }
+
+                        if(element.name == "radioQuestion2" && element.value=="sim"){
+                            document.getElementById("Question4").style.display = "inline";
+                            return;
+                        }else if(element.name == "radioQuestion2" && element.value=="nao"){
+                            document.getElementById("Question5").style.display = "inline";
+                            return;
+                        }
+
+                        if(element.name == "radioQuestion3"){
+                            document.getElementById("Question6").style.display = "inline";
+                            return;
+                        }
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+    <style>td {border: 1px solid black;}</style>
+    <script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
+</body>
+</html>
