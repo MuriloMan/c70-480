@@ -1,0 +1,38 @@
+<a href="../index.html">index</a>
+
+
+<html>
+<head>
+  <meta charset=”UTF-8” />
+  <title>Geolocation</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td><xmp id="td1XMP"></xmp></td>
+      <td id="content">
+        <p id="textP"></p>
+        <script>
+          window.onload = function (){
+            var geoLocator = window.navigator.geolocation;
+            var posOptions = {enableHighAccuracy: true, timeout: 45000};
+            geoLocator.getCurrentPosition(successPosition, errorPosition, posOptions);
+          }
+          function successPosition(pos){
+            var textP = document.getElementById("textP");
+            textP.innerText = "Latitude: " + pos.coords.latitude + " Longitude: " + pos.coords.longitude;
+            alert("Success: " + pos);
+          }
+          function errorPosition(err){
+            var textP = document.getElementById("textP");
+            textP.innerText = "Error: " + err.message + " Code: " + err.code;
+            alert("Error: " + err);
+          }
+        </script>
+      </td>
+    </tr>
+  </table>
+  <style>td {border: 1px solid black;}</style>
+  <script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
+</body>
+</html>
