@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+				
+				<title>JS PROTOTYPE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+				<a href="../index.html">index</a>
+				<table>
+						<tr>
+								<td id="td1XMP">
+								</td>
+								<td id="content">
+										<script>
+												var sports = new Array("foot", "volley", "another", "poker", "XD2", "rgb");
+												
+												//parametro1 = nome do item pra ver se existe ou nao
+												//parametro2 = posição de onde começará a checar, 0 é o inicio
+												//a função retorna o numero da posição, no caso retornaria 1
+												var index = sports.indexOf("volley",0);
+												alert(sports);
+												alert(index);
+										</script>
+								</td>
+						</tr>
+				</table>
+		</body>
+		<style type="text/css" >td {border: 1px solid black;}</style>
+		<script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = "<xmp>" + tdContent.innerHTML + "</xmp>";</script>
+</html>
