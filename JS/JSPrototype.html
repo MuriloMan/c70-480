@@ -1,55 +1,55 @@
 <a href="../index.html">index</a>
 <html>
-<head>
-  <meta charset=”UTF-8” />
-  <title>JS PROTOTYPE</title>
-</head>
-<body>
-  <table>
-    <tr>
-      <td><xmp id="td1XMP"></xmp></td>
-      <td id="content">
-		<input type="text" value="PetName" id="petName"/>
-		<br/>
-		<input type="text" value="PetAge" id="petAge"/>
-		<br/>
-		<input type="button" value="Save" id="savePet"/>
-		<br/>
-		<ul id="list"></ul>
-        <script type="text/JavaScript">
-  			var dogs = [];
-			document.getElementById("savePet").onclick= function(){
-				function dog(name, age){
-				  this.name = name;
-				  this.age = age;
-				}
-				
-				dog.prototype = {
-					add: function(){
-						dogs.push({name : this.name, age : this.age});
-					},
-					list: function(){
-						var list = document.getElementById("list");
-						list.innerHTML="";
-						for(var i=0; i<dogs.length;i++){
-							var li = document.createElement("li");
-							li.innerHTML = dogs[i].name + ", " + dogs[i].age;
-							list.appendChild(li);
-						}
-					}
-				}
-				
-				var name = document.getElementById("petName").value;
-				var age = document.getElementById("petAge").value;
-				var dog = new dog(name, age);
-				dog.add();
-				dog.list();
-			};
-        </script>
-      </td>
-    </tr>
-  </table>
-  <style>td {border: 1px solid black;}</style>
-  <script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
+				<head>
+								<meta charset=”UTF-8” />
+								<title>JS PROTOTYPE</title>
+				</head>
+				<body>
+								<table>
+												<tr>
+																<td><xmp id="td1XMP"></xmp></td>
+								<td id="content">
+												<input type="text" value="PetName" id="petName"/>
+												<br/>
+												<input type="text" value="PetAge" id="petAge"/>
+												<br/>
+												<input type="button" value="Save" id="savePet"/>
+												<br/>
+												<ul id="list"></ul>
+												<script type="text/JavaScript">
+																var dogs = [];
+																document.getElementById("savePet").onclick= function(){
+																function dog(name, age){
+																this.name = name;
+																this.age = age;
+																}
+
+																dog.prototype = {
+																add: function(){
+																dogs.push({name : this.name, age : this.age});
+																},
+																list: function(){
+																var list = document.getElementById("list");
+																list.innerHTML="";
+																for(var i=0; i<dogs.length;i++){
+																var li = document.createElement("li");
+																li.innerHTML = dogs[i].name + ", " + dogs[i].age;
+																list.appendChild(li);
+																}
+																}
+																}
+
+																var name = document.getElementById("petName").value;
+																var age = document.getElementById("petAge").value;
+																var dog = new dog(name, age);
+																dog.add();
+																dog.list();
+																};
+												</script>
+								</td>
+				</tr>
+</table>
+<style>td {border: 1px solid black;}</style>
+<script>var tdContent = document.getElementById("content");document.getElementById("td1XMP").innerHTML = tdContent.innerHTML;</script>
 </body>
 </html>
